@@ -1,0 +1,54 @@
+* {
+    font-family: 'BBH Sans Bartle', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    margin-left: .5%;
+    background-color: rgb(66, 66, 66);
+}
+
+header {
+    text-align: left;
+}
+
+h1 {
+    color: rgb(201, 201, 201);
+}
+
+.games {
+    text-align: center;
+}
+
+/* Game logo button on the main page */
+.game-link { display: inline-block; margin: 0 10px; }
+
+/* Unified game thumbnail */
+.game-thumb {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+    transition: transform 150ms ease, box-shadow 150ms ease;
+}
+.game-thumb:hover, .game-thumb:focus { transform: translateY(-4px); box-shadow: 0 10px 24px rgba(0,0,0,0.45); }
+
+@media (max-width: 640px) {
+    .game-thumb { width: 140px; height: 140px; }
+}
+
+/* Standardized embed page Home button */
+.embed-home {
+    position: fixed;
+    left: 16px;
+    top: 12px;
+    display: inline-block;
+    padding: 10px 16px;
+    background: transparent; /* removed solid blue background */
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.08); /* subtle outline for contrast */
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+    transition: transform 120ms ease, box-shadow 120ms ease, opacity 120ms linear;
+}
+.embed-home:hover { transform: translateY(-2px); box-shadow: 0 10px 26px rgba(0,0,0,0.45); opacity: 0.98; }
+.embed-home:active { transform: translateY(0); }
