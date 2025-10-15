@@ -17,7 +17,7 @@ h1 {
 }
 
 /* Game logo button on the main page */
-.game-link { display: inline-block; margin: 0 10px; }
+.game-link { display: inline-block; margin: 12px 10px; }
 
 /* Unified game thumbnail */
 .game-thumb {
