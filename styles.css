@@ -52,3 +52,50 @@ h1 {
 }
 .embed-home:hover { transform: translateY(-2px); box-shadow: 0 10px 26px rgba(0,0,0,0.45); opacity: 0.98; }
 .embed-home:active { transform: translateY(0); }
+
+/* Fullscreen toggle button for embed pages */
+.embed-fullscreen-btn {
+    position: fixed;
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.08);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    font-size: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 9999;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+    transition: transform 120ms ease, background 120ms ease;
+}
+.embed-fullscreen-btn:hover { transform: translateY(-2px); background: rgba(0,0,0,0.65); }
+
+/* When the embed parent is requested fullscreen, make it and its iframe fill the viewport */
+.embed-fullscreen-target:fullscreen,
+.embed-fullscreen-target.is-fullscreen {
+    width: 100vw !important;
+    height: 100vh !important;
+    max-width: none !important;
+    max-height: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    display: block !important;
+}
+.embed-fullscreen-target.is-fullscreen iframe {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+    border-radius: 0 !important;
+}
+
+/* Hide page header while an embed is fullscreen */
+body:fullscreen header,
+.embed-fullscreen-target:fullscreen header {
+    display: none !important;
+}
